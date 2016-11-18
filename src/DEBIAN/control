@@ -3,7 +3,7 @@ Version: <<VERSION_NUMBER>>
 Section: base
 Priority: optional
 Architecture: amd64
-Depends: git (>= 1:2.1.4-2.1), vim (>= 2:7.4.488-7), tmux (>= 1.9-6), apt-transport-https (>= 1.0.9.8.3), ca-certificates (>= 20141019), python-pip (>= 1.5.6-5), docker-engine (>= 1.5.0-0)
+Depends: git (>= 1:2.1.4-2.1), vim (>= 2:7.4.488-7), tmux (>= 1.9-6), apt-transport-https (>= 1.0.9.8.3), ca-certificates (>= 20141019), python-pip (>= 1.5.6-5), docker-engine (>= 1.5.0-0), aliases (>= 0.8.0)
 Maintainer: Seb Glazebrook <sebastianglazebrook@gmail.com>
 Description: Seb Dev Env
  Install all that's needed for Seb to dev
