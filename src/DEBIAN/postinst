@@ -11,7 +11,7 @@ if ! type "z" > /dev/null; then
   echo "Installing z"
   mkdir -p ~/code
   cd ~/code && git clone https://github.com/rupa/z.git
-  echo "source ~/src/code/z.sh" >> ~/.bash_rc
+  echo "source ~/code/z.sh" >> ~/.bash_rc
 else
   echo "z already installed"
 fi
