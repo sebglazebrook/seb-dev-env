@@ -2,16 +2,22 @@
 
 if ! hash "docker-compose"; then
   echo "Installing docker-compose"
-  sudo pip install docker-compose
+  pip install docker-compose
 else
   echo "docker-compose already installed"
 fi
 
 if ! type "z" > /dev/null; then
   echo "Installing z"
-  mkdir -p ~/code
+  if [ ! -d ~/code ]; then
+    mkdir -p ~/code
+    chown ${USER}:${USER} ~/code
+  fi
+
   cd ~/code && git clone https://github.com/rupa/z.git
-  echo "source ~/code/z.sh" >> ~/.bash_rc
+  chown ${USER}:${USER} ~/code/z
+
+  echo "source ~/code/z/z.sh" >> ~/.bashrc
 else
   echo "z already installed"
 fi
