@@ -21,3 +21,17 @@ if ! type "z" > /dev/null; then
 else
   echo "z already installed"
 fi
+
+if ! type "fzf" > /dev/null; then
+  echo "Installing fzf"
+  if [ ! -d ~/code ]; then
+    mkdir -p ~/code
+    chown ${USER}:${USER} ~/code
+  fi
+
+  cd ~/code && git clone --depth 1 https://github.com/junegunn/fzf.git && ~/code/fzf/install
+  chown ${USER}:${USER} ~/code/fzf
+
+else
+  echo "fzf already installed"
+fi
