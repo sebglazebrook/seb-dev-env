@@ -2,7 +2,7 @@
 
 if ! hash "docker-compose"; then
   echo "Installing docker-compose"
-  sudo pip install docker-compose
+  pip install docker-compose
 else
   echo "docker-compose already installed"
 fi
